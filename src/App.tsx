@@ -1,11 +1,8 @@
 import React from 'react';
+import Router from './routes';
 
-function App(): JSX.Element {
-  return (
-    <div className="App">
-      <p>lello</p>
-    </div>
-  );
-}
+const App: React.FC = () => {
+  return <Router />;
+};
 
 export default App;
