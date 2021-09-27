@@ -4,6 +4,7 @@ import SearchForm from 'components/SearchForm';
 import { SearchProvider, useSearchMember } from 'contexts/searchContext';
 import React, { useCallback, useEffect, useState } from 'react';
 import api from 'services';
+import { Container } from './styles';
 
 type Member = {
   login: string;
@@ -47,7 +48,9 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div>
+    <Container>
+      <h2>Encontre informações sobre os membros do respositório React.</h2>
+
       {!!githubUser && <ProfileCard githubUser={githubUser} />}
 
       <SearchForm repositoryMembers={repositoryMembers} />
@@ -56,7 +59,7 @@ const Home: React.FC = () => {
         repositoryMembers={searchEnabled ? searchResult : repositoryMembers}
         handleLoadProfile={handleLoadUserProfile}
       />
-    </div>
+    </Container>
   );
 };
 
