@@ -3,7 +3,7 @@
 <hr>
 
 <h1 align="center">
-    Lello - Gihub explorer <br>
+    Lello - Github explorer <br>
   <img alt="github explorer app" title="github explorer app" src=".github/mock01.svg" />
 
 </h1>
