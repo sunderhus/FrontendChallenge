@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-export const ProfileCard = styled.div`
-  display: flex;
+export const Container = styled.section`
+  h2 {
+    text-align: center;
+  }
 `;

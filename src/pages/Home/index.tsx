@@ -1,9 +1,10 @@
 import MembersList from 'components/MembersList';
 import ProfileCard from 'components/ProfileCard';
 import SearchForm from 'components/SearchForm';
-import { SearchProvider, useSearchMember } from 'contexts/searchContext';
+import { useSearchMember } from 'contexts/searchContext';
 import React, { useCallback, useEffect, useState } from 'react';
 import api from 'services';
+import { Container } from './styles';
 
 type Member = {
   login: string;
@@ -43,11 +44,19 @@ const Home: React.FC = () => {
   }, []);
 
   if (repositoryMembers.length === 0) {
-    return <>Carregando membros do repositório React.</>;
+    return (
+      <Container>
+        <h2>Carregando informações do repositório React.</h2>
+      </Container>
+    );
   }
 
   return (
-    <div>
+    <Container>
+      <h2>
+        Veja informações sobre os membros do respositório Facebook (React).
+      </h2>
+
       {!!githubUser && <ProfileCard githubUser={githubUser} />}
 
       <SearchForm repositoryMembers={repositoryMembers} />
@@ -56,15 +65,8 @@ const Home: React.FC = () => {
         repositoryMembers={searchEnabled ? searchResult : repositoryMembers}
         handleLoadProfile={handleLoadUserProfile}
       />
-    </div>
+    </Container>
   );
 };
 
-const HocHome: React.FC = () => {
-  return (
-    <SearchProvider>
-      <Home />
-    </SearchProvider>
-  );
-};
-export default HocHome;
+export default Home;
