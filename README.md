@@ -56,7 +56,7 @@ $ git clone https://github.com/sunderhus/FrontendChallenge
 # After clone, open on your favorite IDE, in my case Visual Studio Code.
 # Após o clone, abra em seu ambiente de desenvolvimento favorito, no meu caso usarei o Visual Studio Code.
 
-$ cd githubexplorer && code .
+$ cd FrontendChallenge && code .
 
 # install all dependencies - instalar todas as dependências
 $ yarn
