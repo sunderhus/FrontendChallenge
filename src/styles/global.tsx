@@ -13,6 +13,9 @@ export default createGlobalStyle`
   :root{
     --background:#f0f0f5;
     --secondary:#3a3a3a;
+    --primary:#04d361;
+    --tertiary:#fff;
+    --font-regular:1.8rem;
   }
 
   html{
@@ -33,9 +36,19 @@ export default createGlobalStyle`
   #root{
       max-width:960px;
       margin:0 auto;
-      padding: 40px 20px;
+      padding: 4rem 2rem;
   }
   button{
       cursor:pointer;
   }
+
+
+  @keyframes smoothFadeIn{
+      from{
+        opacity:0
+      }
+      to{
+        opacity:1;
+      }
+    }
 `;
