@@ -44,12 +44,18 @@ const Home: React.FC = () => {
   }, []);
 
   if (repositoryMembers.length === 0) {
-    return <>Carregando membros do repositório React.</>;
+    return (
+      <Container>
+        <h2>Carregando informações do repositório React.</h2>
+      </Container>
+    );
   }
 
   return (
     <Container>
-      <h2>Encontre informações sobre os membros do respositório React.</h2>
+      <h2>
+        Veja informações sobre os membros do respositório Facebook (React).
+      </h2>
 
       {!!githubUser && <ProfileCard githubUser={githubUser} />}
 
@@ -63,11 +69,4 @@ const Home: React.FC = () => {
   );
 };
 
-const HocHome: React.FC = () => {
-  return (
-    <SearchProvider>
-      <Home />
-    </SearchProvider>
-  );
-};
-export default HocHome;
+export default Home;
