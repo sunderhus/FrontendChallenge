@@ -44,7 +44,7 @@ Este leyout foi construído sem um design prévio.
 ✅ Caso de uso, mostrar informações de usuário selecionado ⌛ 20 minutos<br>
 ✅ Caso de uso, criar campo de pesquisa ⌛ 53 minutos<br>
 ✅ Refatorar estilos dos components e página inicial ⌛ 2 horas e 27 minutos<br>
-✅ Refatorar código para melhorar semântica e compartilhamento de inform 1 hora e 33 minutos <br>
+✅ Refatorar código para melhorar semântica e compartilhamento de informações ⌛ 1 hora e 33 minutos <br>
 ✅ Criação de documentação ⌛ 32 minutos<br>
 
 ## ❔ How to execute - Como executar
