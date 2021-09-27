@@ -46,17 +46,15 @@ const SearchForm: React.FC<SearchFormProps> = ({ repositoryMembers }) => {
     <Container>
       <form onSubmit={event => event.preventDefault()}>
         <fieldset>
-          <legend>Buscar membro</legend>
-          <label htmlFor="search">
-            Busque membros deste repositório:
-            <input
-              type="search"
-              name="search"
-              id="search"
-              value={searchText}
-              onChange={handleInputChange}
-            />
-          </label>
+          <legend>Pesquisar membros</legend>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Pesquise membros pelo nome de login."
+            value={searchText}
+            onChange={handleInputChange}
+          />
         </fieldset>
       </form>
     </Container>
