@@ -1,7 +1,7 @@
 import MembersList from 'components/MembersList';
 import ProfileCard from 'components/ProfileCard';
 import SearchForm from 'components/SearchForm';
-import { SearchProvider, useSearchMember } from 'contexts/searchContext';
+import { useSearchMember } from 'contexts/searchContext';
 import React, { useCallback, useEffect, useState } from 'react';
 import api from 'services';
 import { Container } from './styles';
