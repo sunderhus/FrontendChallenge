@@ -28,17 +28,13 @@ export const List = styled.ul`
 
     button {
       width: 18rem;
-      background-color: #04d361;
+      background-color: var(--primary);
       border: 0px;
       height: 6.4rem;
-      border-radius: 0px 5px 5px 0px;
-      color: #fff;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: var(--background);
       font-weight: bold;
       transition: background-color 0.2s;
-
-      &:hover {
-        background-color: '#04d361';
-      }
     }
   }
 `;

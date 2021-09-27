@@ -27,7 +27,7 @@ const MembersList: React.FC<MembersListProps> = ({
         {members.map(({ login, avatar_url }) => {
           return (
             <li key={login}>
-              <img src={avatar_url} alt={`Avatar of ${avatar_url}`} />
+              <img src={avatar_url} alt={`Avatar de ${avatar_url}`} />
               <p>{login}</p>
               <button type="button" onClick={() => handleLoadProfile(login)}>
                 Ver mais
