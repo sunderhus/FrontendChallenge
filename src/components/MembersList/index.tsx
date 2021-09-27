@@ -23,19 +23,19 @@ const MembersList: React.FC<MembersListProps> = ({
 
   return (
     <div>
-      {members.map(({ login, avatar_url }) => {
-        return (
-          <List key={login}>
-            <li>
+      <List>
+        {members.map(({ login, avatar_url }) => {
+          return (
+            <li key={login}>
               <img src={avatar_url} alt={`Avatar of ${avatar_url}`} />
               <p>{login}</p>
               <button type="button" onClick={() => handleLoadProfile(login)}>
                 Ver mais
               </button>
             </li>
-          </List>
-        );
-      })}
+          );
+        })}
+      </List>
     </div>
   );
 };
