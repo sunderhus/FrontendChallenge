@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Lello - Gihub explorer - React⚛ + Typescript + Styled components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr>
 
-## Available Scripts
+<h1 align="center">
+    Lello - Github explorer <br>
+  <img alt="github explorer app" title="github explorer app" src=".github/mock01.svg" />
 
-In the project directory, you can run:
+</h1>
 
-### `yarn start`
+<p align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="PRs welcome!" src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=15C3D6&labelColor=000000" />
+  <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"/>
+  <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=15C3D6&labelColor=000000">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+## 🚀 Required Tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Node](https://nodejs.org/en/download/)
+[Yarn](https://yarnpkg.com/)
+[Git](https://git-scm.com/downloads)
 
-### `yarn build`
+## 💻 Project - Projeto - [🔗Github cards](https://github.com/sunderhus/FrontendChallenge/projects/1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>This project aims to enable repository members search and personal github user informations.</p><br>
+<p>Este projeto possibilita a busca de membros em um repositório do github bem como informações de um usuário do github.</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔖 Layout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This layout was buil without any base design. <br>
 
-### `yarn eject`
+Este leyout foi construído sem um design prévio.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🧠 Steps and time - Etapas e tempo necessário
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ Criar cards para gerenciamento de atividade no github ⌛ 32 minutos; <br>
+✅ Criar estrutura inicial, limpeza de código e instalação de bibliotecas ⌛ 45 minutos ; <br>
+✅ Adicionar e configurar formatadores de código ⌛ 1 hora e 24 minutos<br>
+✅ Caso de uso, listagem de membros ⌛ 30 minutos<br>
+✅ Caso de uso, mostrar informações de usuário selecionado ⌛ 20 minutos<br>
+✅ Caso de uso, criar campo de pesquisa ⌛ 53 minutos<br>
+✅ Refatorar estilos dos components e página inicial ⌛ 2 horas e 27 minutos<br>
+✅ Refatorar código para melhorar semântica e compartilhamento de informações ⌛ 1 hora e 33 minutos <br>
+✅ Criação de documentação ⌛ 32 minutos<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ❔ How to execute - Como executar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone repository
+$ git clone https://github.com/sunderhus/FrontendChallenge
 
-## Learn More
+# After clone, open on your favorite IDE, in my case Visual Studio Code.
+# Após o clone, abra em seu ambiente de desenvolvimento favorito, no meu caso usarei o Visual Studio Code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+$ cd githubexplorer && code .
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# install all dependencies - instalar todas as dependências
+$ yarn
+
+# run project - inicializar o projeto.
+$ yarn start
+
+```
+
+## 📄-License
+
+This project is under MIT License. check-out this file here 👉 [LICENSE](LICENSE.md).
+
+---
+
+Made by Matheus Sunderhus : [Linkedin!](https://www.linkedin.com/in/matheus-sunderhus/)
