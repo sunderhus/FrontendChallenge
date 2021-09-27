@@ -1,11 +1,14 @@
 import React from 'react';
+import Router from './routes';
+import GlobalStyles from './styles';
 
-function App(): JSX.Element {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <p>lello</p>
-    </div>
+    <>
+      <GlobalStyles />
+      <Router />
+    </>
   );
-}
+};
 
 export default App;
