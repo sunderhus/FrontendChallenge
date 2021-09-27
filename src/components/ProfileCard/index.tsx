@@ -18,10 +18,38 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ githubUser }) => {
   return (
     <Container>
       <img src={githubUser.avatar_url} alt={`avatar of ${githubUser.name}`} />
-      <p>{githubUser.name}</p>
-      <p>quantidade de repositórios: {githubUser.public_repos}</p>
-      <p>número de seguidores: {githubUser.followers}</p>
-      <p>Entrou no github em: {dateFormater(githubUser.created_at)}</p>
+
+      <div className="profile-details">
+        <div className="profile-details-item">
+          <p className="profile-details-item--label">Nome:</p>
+          <p className="profile-details-item--content">{githubUser.name}</p>
+        </div>
+
+        <div className="profile-details-item">
+          <p className="profile-details-item--label">
+            Quantidade de repositórios:
+          </p>
+          <p className="profile-details-item--content">
+            {githubUser.public_repos}
+          </p>
+        </div>
+
+        <div className="profile-details-item">
+          <p className="profile-details-item--label">
+            Quantidade de seguidores:
+          </p>
+          <p className="profile-details-item--content">
+            {githubUser.followers}
+          </p>
+        </div>
+
+        <div className="profile-details-item">
+          <p className="profile-details-item--label">Entrou no Github em:</p>
+          <p className="profile-details-item--content">
+            {dateFormater(githubUser.created_at)}
+          </p>
+        </div>
+      </div>
     </Container>
   );
 };
