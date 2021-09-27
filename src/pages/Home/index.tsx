@@ -1,13 +1,70 @@
-import React from 'react';
-import { useParams } from 'react-router';
+import MembersList from 'components/MembersList';
+import ProfileCard from 'components/ProfileCard';
+import SearchForm from 'components/SearchForm';
+import { SearchProvider, useSearchMember } from 'contexts/searchContext';
+import React, { useCallback, useEffect, useState } from 'react';
+import api from 'services';
 
-type Params = {
+type Member = {
   login: string;
+  avatar_url: string;
+};
+
+type GithubUser = {
+  avatar_url: string;
+  name: string;
+  public_repos: number;
+  followers: number;
+  created_at: Date;
 };
 
 const Home: React.FC = () => {
-  const { login } = useParams<Params>();
-  return <>Home page : {login}</>;
+  const { searchResult, searchEnabled } = useSearchMember();
+  const [repositoryMembers, setRepositoryMembers] = useState<Member[]>([]);
+  const [githubUser, setGitHubUser] = useState<GithubUser>();
+
+  const handleLoadUserProfile = useCallback(async (login: string) => {
+    if (!login) {
+      return;
+    }
+    const result = await api.get<GithubUser>(`users/${login}`);
+    if (!result.data) {
+      return;
+    }
+    setGitHubUser(result.data);
+  }, []);
+
+  useEffect(() => {
+    async function fetchGithubRepositoryMembers() {
+      const result = await api.get('/orgs/facebook/public_members');
+      setRepositoryMembers(result.data);
+    }
+    fetchGithubRepositoryMembers();
+  }, []);
+
+  if (repositoryMembers.length === 0) {
+    return <>Carregando membros do repositório React.</>;
+  }
+
+  return (
+    <div>
+      {!!githubUser && <ProfileCard githubUser={githubUser} />}
+
+      <SearchForm repositoryMembers={repositoryMembers} />
+
+      <MembersList
+        repositoryMembers={searchEnabled ? searchResult : repositoryMembers}
+        handleLoadProfile={handleLoadUserProfile}
+      />
+    </div>
+  );
 };
 
-export default Home;
+const HocHome: React.FC = () => {
+  return (
+    <SearchProvider>
+      <Home />
+    </SearchProvider>
+  );
+};
+export default HocHome;
